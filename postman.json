@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "ba34ef3d-6554-454c-8415-081dce131c58",
+		"name": "Restaurants API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Restaurant",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"name\": \"Restaurante do Jackson\"\n    }"
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/restaurant",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"restaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "accessToken",
+									"value": "BQCJ1lI6A1b26MCHa5BZGvjuV9Pmy_wmDz1jp4CATkA7SBixZnhdj973yKzexuJqHZ3RhGy15NGhokUhxpwiMwS9roruz2PT1lg4Bcp8ivMqufjAX-hb_Itg6KOHQdM5gU70I4Bpw8lpZK93qyTR-nHZlBpmFD5Oq0hTk9GSgAY6Eg3OGQfHi8W37VjF0i5c3Ej04b2eVl4a9tZcOE3Hz_CTd-BLWyNrtHPLWVm1XBnxkv1FzwVTmoy-rAsdFQuI0FSA6E-Gvo_PMyopXg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"name\": \"Novo Restaurante via Postman 1\"\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/restaurant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"restaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "accessToken",
+									"value": "BQCJ1lI6A1b26MCHa5BZGvjuV9Pmy_wmDz1jp4CATkA7SBixZnhdj973yKzexuJqHZ3RhGy15NGhokUhxpwiMwS9roruz2PT1lg4Bcp8ivMqufjAX-hb_Itg6KOHQdM5gU70I4Bpw8lpZK93qyTR-nHZlBpmFD5Oq0hTk9GSgAY6Eg3OGQfHi8W37VjF0i5c3Ej04b2eVl4a9tZcOE3Hz_CTd-BLWyNrtHPLWVm1XBnxkv1FzwVTmoy-rAsdFQuI0FSA6E-Gvo_PMyopXg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"name\": \"Novo Restaurante\",\n        \"isActive\": true\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/restaurant/7d256d4a-0835-4ce0-76ba-08d623073070",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"restaurant",
+								"7d256d4a-0835-4ce0-76ba-08d623073070"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "accessToken",
+									"value": "BQCJ1lI6A1b26MCHa5BZGvjuV9Pmy_wmDz1jp4CATkA7SBixZnhdj973yKzexuJqHZ3RhGy15NGhokUhxpwiMwS9roruz2PT1lg4Bcp8ivMqufjAX-hb_Itg6KOHQdM5gU70I4Bpw8lpZK93qyTR-nHZlBpmFD5Oq0hTk9GSgAY6Eg3OGQfHi8W37VjF0i5c3Ej04b2eVl4a9tZcOE3Hz_CTd-BLWyNrtHPLWVm1XBnxkv1FzwVTmoy-rAsdFQuI0FSA6E-Gvo_PMyopXg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n \t    \"id\": \"7d256d4a-0835-4ce0-76ba-08d623073070\",\n        \"name\": \"Restaurante (editado)\"\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/restaurant/7d256d4a-0835-4ce0-76ba-08d623073070",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"restaurant",
+								"7d256d4a-0835-4ce0-76ba-08d623073070"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://localhost:5001/api/restaurant/748ee463-dabc-48be-f4d3-08d6226c927e",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"restaurant",
+								"748ee463-dabc-48be-f4d3-08d6226c927e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllMeals",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "accessToken",
+									"value": "BQCJ1lI6A1b26MCHa5BZGvjuV9Pmy_wmDz1jp4CATkA7SBixZnhdj973yKzexuJqHZ3RhGy15NGhokUhxpwiMwS9roruz2PT1lg4Bcp8ivMqufjAX-hb_Itg6KOHQdM5gU70I4Bpw8lpZK93qyTR-nHZlBpmFD5Oq0hTk9GSgAY6Eg3OGQfHi8W37VjF0i5c3Ej04b2eVl4a9tZcOE3Hz_CTd-BLWyNrtHPLWVm1XBnxkv1FzwVTmoy-rAsdFQuI0FSA6E-Gvo_PMyopXg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"name\": \"Novo Restaurante\",\n        \"isActive\": true\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/restaurant/7d256d4a-0835-4ce0-76ba-08d623073070/meals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"restaurant",
+								"7d256d4a-0835-4ce0-76ba-08d623073070",
+								"meals"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Meal",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://localhost:5001/api/meal",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"meal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Name\": \"Ala minuta\",\n\t\"Price\": 18.90,\n\t\"RestaurantId\": \"7d256d4a-0835-4ce0-76ba-08d623073070\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/meal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"meal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://localhost:5001/api/meal/37ee074b-89dd-4c23-8e4f-08d6232f4702",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"meal",
+								"37ee074b-89dd-4c23-8e4f-08d6232f4702"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"37ee074b-89dd-4c23-8e4f-08d6232f4702\",\n    \"name\": \"Ala minuta (Carne)\",\n    \"price\": 18.9,\n    \"restaurantId\": \"7d256d4a-0835-4ce0-76ba-08d623073070\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/meal/37ee074b-89dd-4c23-8e4f-08d6232f4702",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"meal",
+								"37ee074b-89dd-4c23-8e4f-08d6232f4702"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://localhost:5001/api/meal/37ee074b-89dd-4c23-8e4f-08d6232f4702",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"meal",
+								"37ee074b-89dd-4c23-8e4f-08d6232f4702"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
