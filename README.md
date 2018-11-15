@@ -1,3 +1,4 @@
+```
 dotnet new sln -o Restaurants
 cd Restaurants/
 
@@ -44,3 +45,4 @@ dotnet ef migrations add InitialCreate
 dotnet ef database update
 cd ..
 
+```
